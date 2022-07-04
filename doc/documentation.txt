@@ -1,0 +1,63 @@
+What is FastAPI?
+FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.
+
+The key features are:
+
+Fast: Very high performance, on par with NodeJS and Go (thanks to Starlette and Pydantic). One of the fastest Python frameworks available.
+
+Fast to code: Increase the speed to develop features by about 200% to 300%. *
+
+Fewer bugs: Reduce about 40% of human (developer) induced errors. *
+Intuitive: Great editor support. Completion everywhere. Less time debugging.
+Easy: Designed to be easy to use and learn. Less time reading docs.
+Short: Minimize code duplication. Multiple features from each parameter declaration. Fewer bugs.
+Robust: Get production-ready code. With automatic interactive documentation.
+
+Install all the necessary libraries using pip
+
+required Libraries:
+virtualenv
+uvicorn
+fastapi
+sqlalchemy
+pydantic
+
+
+file structure:
+Steeleye:folder name
+	__pycache__
+	trade-env: virtual environment
+	trades: main folder name for APIs
+		__pycache__
+		__init__.py
+		database.py: database file for connecting to sql alchemy(sqlite)
+		main.py: used for declaring functions for api
+		mainapi.py: used for running fast api ( the main file)
+		models.py: used to declare the pydantic models
+		schemas.py: used to declare or initialise the database schemas(eg: creating tables)
+		requirements.txt: used to install all necessary requirements for running the programs
+		trade.db: database file for sqlite
+
+
+Database.py:
+
+imported necessary libraries for connecting to database
+created a variable and assigned the valu of sqlite and created engine and created SessionLocal
+
+
+main.py:
+imported all the necessary libraries
+creted all the functions necessary for fetching data and showing data in api
+
+
+mainapi.py:
+imported all the necessary libraries
+creted links for apis such as @app.get,@app.post etc.\
+
+models.py:
+imported all the necessary libraries 
+this file is for creating the pydantic midels
+
+schemas.py:
+imported all the necessarfu likbraries 
+used to create tables in the dattabse
